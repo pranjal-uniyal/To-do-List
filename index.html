@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO-DO</title>
+  <script defer src="main.js"></script></head>
+  <body>
+    <header>
+      <h1>TO-DO</h1>
+    </header>
+
+    <main class="main">
+      <aside class="aside">
+        <h1>Projects</h1>
+        <form id="projects">
+          <button type="submit" class="btn">Show project</button>
+        </form>
+        <button id="add-project" class="btn">Add Project</button>
+      </aside>
+      <section class="tasks">
+        <div class="project-info hideProjectInfo">
+          <form id="projectform">
+            <div>
+              <label for="project-title">Project Name</label>
+              <input class="input" id="project-title" type="text" />
+            </div>
+            <button type="submit" class="btn">Add Project</button>
+          </form>
+        </div>
+
+        <button id="new-open" class="btn">New Todo</button>
+        <div class="Todo-info hideTodoinfo">
+          <form id="todoform">
+            <div>
+              <label for="title">Title</label>
+              <input class="input" id="title" type="text" />
+            </div>
+            <div>
+              <label for="description">Description</label>
+              <input class="input" id="description" type="" />
+            </div>
+            <div>
+              <label for="dueDate">Due Date</label>
+              <input class="input" id="dueDate" type="date" />
+            </div>
+            <fieldset>
+              <legend>Priority</legend>
+
+              <div>
+                <input type="radio" id="low" name="priority" value="low" />
+                <label for="low">Low</label>
+              </div>
+
+              <div>
+                <input
+                  type="radio"
+                  id="medium"
+                  name="priority"
+                  value="medium"
+                />
+                <label for="medium">Medium</label>
+              </div>
+              <div>
+                <input type="radio" id="high" name="priority" value="high" />
+                <label for="high">High</label>
+              </div>
+            </fieldset>
+
+            <div>
+              <label for="project-select-1">Project</label>
+              <select name="project" id="project-select-1"></select>
+            </div>
+            <div>
+              <label for="doneCheckbox">Done</label>
+              <input id="doneCheckbox" type="checkbox" />
+            </div>
+
+            <button type="submit" class="btn">Add Todo and display all</button>
+          </form>
+        </div>
+        <div class="edit-Todo-info hideTodoinfo">
+          <form id="edittodoform">
+            <div>
+              <label for="edit-title">Title</label>
+              <input class="input" id="edit-title" type="text" />
+            </div>
+            <div>
+              <label for="edit-description">Description</label>
+              <input class="input" id="edit-description" type="" />
+            </div>
+            <div>
+              <label for="edit-dueDate">Due Date</label>
+              <input class="input" id="edit-dueDate" type="date" />
+            </div>
+            <fieldset>
+              <legend>Priority</legend>
+
+              <div>
+                <input type="radio" id="low" name="edit-priority" value="low" />
+                <label for="low">Low</label>
+              </div>
+
+              <div>
+                <input
+                  type="radio"
+                  id="medium"
+                  name="edit-priority"
+                  value="medium"
+                />
+                <label for="medium">Medium</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="high"
+                  name="edit-priority"
+                  value="high"
+                />
+                <label for="high">High</label>
+              </div>
+            </fieldset>
+
+            <div>
+              <label for="project-select-2">Project</label>
+              <select name="project" id="project-select-2"></select>
+            </div>
+            <div>
+              <label for="editdoneCheckbox">Done</label>
+              <input id="editdoneCheckbox" type="checkbox" />
+            </div>
+
+            <button id="edit-submit-2" type="submit" class="btn">
+              Edit Todo
+            </button>
+          </form>
+        </div>
+        <fieldset>
+          <legend>To-do's</legend>
+          <div id="todo-container"></div>
+        </fieldset>
+      </section>
+    </main>
+  </body>
+</html>
